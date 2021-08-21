@@ -16,24 +16,13 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<!-- {% if courses.has_previous %}
-				<a class="col btn btn-primary text-decoration-none text-white d-flex justify-content-center align-items-center" href="?page={{ courses.previous_page_number }}" role="button">
-					<<
-				</a>
-			{% else %}
-				<a class="col btn btn-primary text-decoration-none text-white disabled" href="#" role="button"></a>
-			{% endif %} -->
-
 			<div class="col-12 ">
 				<table class="table">
 					<thead>
 					  <tr>
-						<th scope="col">Course code</th>
-						<th scope="col">Course name</th>
-						<th scope="col">First day</th>
-                        <th scope="col">Second day</th>
-						<th scope="col">Start time</th>
-						<th scope="col">Finish time</th>
+						<th scope="col">Course code <br> Course name</th>
+						<th scope="col">First day <br> Second day</th>
+						<th scope="col">Start time <br>	Finish time</th>
 						<th scope="col">Section</th>
                         <th scope="col">Room</th>
 						<th scope="col">Lecture name</th>
@@ -41,17 +30,13 @@
 						<th scope="col">Prerequisite</th>
 					  </tr>
 					</thead>
-		
 					<tbody>
 						{% if courses %}
 							{% for course in courses %}
 								<tr>
-									<td>{{ course.course_code }}</td>
-									<td>{{ course.course_name }}</td>
-									<td>{{ course.first_day }}</td>
-                                    <td>{{ course.second_day }}</td>
-									<td>{{ course.start_time }}</td>
-									<td>{{ course.finish_time }}</td>
+									<td>{{ course.course_code }} <br>{{ course.course_name }}</td>
+									<td>{{ course.first_day }} <br> {{ course.second_day }}</td>
+									<td>{{ course.start_time }} <br> {{ course.finish_time }}</td>
                                     <td>{{ course.section }}</td>
 									<td>{{ course.room }}</td>
 									<td>{{ course.lecture_name }}</td>
@@ -64,26 +49,10 @@
 								Something went wrong!
 							</div>
 						{% endif %}
-						
 					</tbody>
 				</table>
 			</div>
-
-			<!-- {% if courses.has_next %}
-				<a class="col btn btn-primary text-decoration-none text-white d-flex justify-content-center align-items-center " href="?page={{ courses.next_page_number }}" role="button">
-					>>
-				</a>
-			{% else %}
-				<a class="col btn btn-primary text-decoration-none text-white disabled" href="#" role="button"></a>
-			{% endif %} -->
 		</div>
-		<div class="container text-center">
-			<!-- <p class="text-center">Page {{ courses.number }} of {{ courses.paginator.num_pages }}</p> -->
-			<a class="btn btn-primary" href="/">Go Home page</a>
-		</div>
-		
 	</div>
-		
-    <!-- <script src=" {% static 'js/bootstrap.js' %} "></script> -->
 </body>
 </html>
